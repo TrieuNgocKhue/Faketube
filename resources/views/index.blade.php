@@ -23,7 +23,6 @@
                     <thead>
                         <tr>
                             <th>STT</th>
-                            <th>ChannelID</th>
                             <th>ChannelName</th>
                             <th>Description</th>
                             <th>SubscribesCount</th>
@@ -34,10 +33,9 @@
                         @foreach ($channel as $XL)
                             <tr>
                                 <td>{{ ++$i }}</td>
-                                <td>{{ $XL ->id }}</td>
                                 <td>{{ $XL ->ChannelName }}</td>
                                 <td>{{ $XL ->Description }}</td>
-                                <td>{{ $XL ->SubscribesCount }}</td>
+                                <td>{{ $XL ->SubscribeCount }}</td>
                                 <td>{{ $XL ->URL }}</td>
                                 <td>
                                     <form action="{{ route('channel.destroy', $XL->id) }}" method="POST">

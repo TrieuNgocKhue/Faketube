@@ -29,7 +29,11 @@ class ChannelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Channel::create($request->all());
+        $data = $request->all();
+        $data['ChannelName'] = 'Default Channel'; 
+        Channel::create($data);
+        return redirect()->route('channel.index')->with('thongbao', 'Thêm thông tin thành công');
     }
 
     /**
@@ -43,24 +47,26 @@ class ChannelController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Channel $channel)
     {
-        //
+        return view('edit', compact('channel'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Channel $channel)
     {
-        //
+        $channel->update($request->all());
+        return redirect()->route('channel.index')->with('thongbao', 'Cập nhật thông tin thành công! ');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Channel $channel)
     {
-        //
+        $channel->delete();
+        return redirect()->route('channel.index')->with('thongbao', 'Xóa thông tin thành công!');
     }
 }

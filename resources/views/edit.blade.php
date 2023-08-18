@@ -9,12 +9,12 @@
                     <h2>Sửa Faketube</h2>
                 </div>
                 <div class="col-md-6">
-                    <a href="{{ route('sinhvien.index') }}" class="btn btn-primary float-end">Danh sách sinh viên</a>
+                    <a href="{{ route('channel.index') }}" class="btn btn-primary float-end">Danh sách sinh viên</a>
                 </div>
             </div>
         </div>
         <div class="card-body">
-            <form action="{{ route('sinhvien.update',  $channel->id) }}" method="POST">
+            <form action="{{ route('channel.update',  $channel->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="row">
@@ -29,13 +29,13 @@
                         </div>
                         <div class="form-group">
                             <strong>Description</strong>
-                            <input type="date" name="Description" value="{{ $channel->Description }}" class="form-control">
+                            <input type="text" name="Description" value="{{ $channel->Description }}" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <strong>SubscribesCount</strong>
-                            <input type="text" name="SubscribesCount" value="{{ $channel->SubscribesCount }}" class="form-control">
+                            <input type="text" name="SubscribeCount" value="{{ $channel->SubscribesCount }}" class="form-control">
                         </div>
                         <div class="form-group">
                             <strong>URL</strong>

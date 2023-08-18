@@ -28,17 +28,17 @@
                         </div>
                         <div class="form-group">
                             <strong>Description</strong>
-                            <input type="date" name="Description" class="form-control">
+                            <input type="text" name="Description" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <strong>SubscribesCount</strong>
-                            <input type="text" name="SubscribesCount" class="form-control" >
+                            <input type="text" name="SubscribeCount" class="form-control" >
                         </div>
                         <div class="form-group">
                             <strong>URL</strong>
-                            <input type="tel" name="URL" class="form-control">
+                            <input type="text" name="URL" class="form-control">
                         </div>
                     </div>
                 </div>
