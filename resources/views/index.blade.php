@@ -40,8 +40,8 @@
                                 <td>{{ $XL ->SubscribesCount }}</td>
                                 <td>{{ $XL ->URL }}</td>
                                 <td>
-                                    <form action="{{ route('channel.destroy', $sv->id) }}" method="POST">
-                                    <a href="{{ route('channel.edit', $sv->id) }}" class="btn btn-info">Sửa</a>
+                                    <form action="{{ route('channel.destroy', $XL->id) }}" method="POST">
+                                    <a href="{{ route('channel.edit', $XL->id) }}" class="btn btn-info">Sửa</a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa không?')">Xóa</button>
@@ -51,7 +51,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                {{ $sinhvien->links('pagination::bootstrap-4') }}
+                {{ $channel->links('pagination::bootstrap-4') }}
             </div>
         </div>
     </div>

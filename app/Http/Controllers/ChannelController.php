@@ -12,8 +12,8 @@ class ChannelController extends Controller
      */
     public function index()
     {
-        $sinhvien = Channel::paginate(5);
-        return view('index', compact('sinhvien'))->with('i', (request()->input('page', 1)-1)*5);
+        $channel = Channel::paginate(5);
+        return view('index', compact('channel'))->with('i', (request()->input('page', 1)-1)*5);
     }
 
     /**

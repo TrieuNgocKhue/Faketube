@@ -18,4 +18,4 @@ use App\Http\Controllers\ChannelController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/channel', [ChannelController::class, 'index']);
+Route::resource('/channel', ChannelController::class);
